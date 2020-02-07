@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Web.UI.WebControls;
 
 namespace OnlineFoodOrdering
 {
@@ -72,6 +73,64 @@ namespace OnlineFoodOrdering
                 {
                     return "LogIn failed";
                 }
+            }
+        }
+        public DataTable DisplayRestaurantDetails()
+        {
+            using (sqlConnection = new SqlConnection(connectionString))
+            {
+                string query = "Sp_DisplayRestaurant";
+                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                DataTable dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+                return dataTable;
+                
+            }
+        }
+        public void UpdateRestaurantDetails(string name,string type,string location, int id)
+        {
+            string query = "Sp_UpdateRestaurant";
+            using (sqlConnection = new SqlConnection(connectionString))
+            {
+                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@RestaurantName", name);
+                sqlCommand.Parameters.AddWithValue("@RestaurantType", type);
+                sqlCommand.Parameters.AddWithValue("@Location", location);
+                sqlCommand.Parameters.AddWithValue("@RestaurantId", id);
+                sqlConnection.Open();
+                sqlCommand.ExecuteNonQuery();
+                DisplayRestaurantDetails();
+            }
+        }
+        public void DeleteRestaurantDetails(int id)
+        {
+            using (sqlConnection = new SqlConnection(connectionString))
+            {
+                string query = "Sp_DeleteRestaurant";
+                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@RestaurantId", id);
+                sqlConnection.Open();
+                sqlCommand.ExecuteNonQuery();
+
+            }
+        }
+        public void InsertRestaurantDetails(string restaurantName,string restaurantType,string location)
+        {
+            string query = "Sp_InsertRestaurant";
+            using(sqlConnection=new SqlConnection(connectionString))
+            {
+                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@RestaurantName", restaurantName);
+                sqlCommand.Parameters.AddWithValue("@RestaurantType", restaurantType);
+                sqlCommand.Parameters.AddWithValue("@Location", location);
+                sqlConnection.Open();
+                sqlCommand.ExecuteNonQuery();
+                DisplayRestaurantDetails();
             }
         }
         
