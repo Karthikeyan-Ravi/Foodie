@@ -1,0 +1,11 @@
+﻿body {
+    /*background-image:url('Image/Swiggy.jpg');*/
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.box{
+    color:white;
+    font-size:large;
+    font-style:oblique;
+
+}
