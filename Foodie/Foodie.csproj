@@ -77,9 +77,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomerFields.cs" />
-    <Compile Include="CustomerRepository.cs" />
-    <Compile Include="DBUtils.cs" />
     <Compile Include="RestaurantDetails.aspx.cs">
       <DependentUpon>RestaurantDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -90,7 +87,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Home.cs" />
     <Compile Include="Home.Master.cs">
       <DependentUpon>Home.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -98,7 +94,6 @@
     <Compile Include="Home.Master.designer.cs">
       <DependentUpon>Home.Master</DependentUpon>
     </Compile>
-    <Compile Include="Portal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignIn.aspx.cs">
       <DependentUpon>SignIn.aspx</DependentUpon>
@@ -136,6 +131,20 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineFoodOrder.BL\OnlineFoodOrder.BL.csproj">
+      <Project>{bf13e510-9d15-48d8-a213-28a824114cee}</Project>
+      <Name>OnlineFoodOrder.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnlineFoodOrder.Common\OnlineFoodOrder.Common.csproj">
+      <Project>{36dc4228-46f8-443a-aab3-71a86570d952}</Project>
+      <Name>OnlineFoodOrder.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnlineFoodOrder.Entity\OnlineFoodOrder.Entity.csproj">
+      <Project>{5a35895e-caf9-43ca-a6bb-65865c540de7}</Project>
+      <Name>OnlineFoodOrder.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

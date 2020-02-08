@@ -145,16 +145,16 @@ namespace OnlineFoodOrdering
             }
             return logInPassword;
         }
-        public static bool ValidateLogInDetails(List<CustomerFields> details)
-        {
-            foreach (CustomerFields customer in details)
-            {
-                if (((customer.Mail).Equals(logInMail)) && ((customer.Password).Equals(logInPassword)))
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
+        //public static bool ValidateLogInDetails(List<CustomerFields> details)
+        //{
+        //    foreach (CustomerFields customer in details)
+        //    {
+        //        if (((customer.Mail).Equals(logInMail)) && ((customer.Password).Equals(logInPassword)))
+        //        {
+        //            return true;
+        //        }
+        //    }
+        //    return false;
+        //}
     }
 }

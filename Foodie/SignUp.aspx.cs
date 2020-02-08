@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using OnlineFoodOrder.BL;
+using OnlineFoodOrder.Entity;
 using OnlineFoodOrdering;
 
 namespace Foodie
@@ -17,16 +19,21 @@ namespace Foodie
 
         protected void RegisterButton_Click(object sender, EventArgs e)
         {
-            CustomerRepository customerRepository = new CustomerRepository();
             CustomerFields customerFields = new CustomerFields(Txtname.Text, Convert.ToDouble(TxtPhone.Text), TxtEmail.Text, TxtPassword.Text,"User");
-            bool result = customerRepository.GetSignUpDetails(customerFields);
+            CustomerBl customerBl = new CustomerBl(); 
+            bool result = customerBl.GetSignUpDetails(customerFields);
             if (result == true)
             {
                 Response.Write("Registration successful");
-                Response.Redirect("SigIn.aspx");
+                Response.Redirect("SignIn.aspx");
             }
             else
                 Response.Write("Registration failed");
+        }
+
+        protected void signInButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SignIn.aspx");
         }
     }
 }

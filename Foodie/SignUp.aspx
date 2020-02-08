@@ -57,7 +57,7 @@
             <td>
                 <asp:Button runat="server" ID="registerButton" Text="Register" OnClick="RegisterButton_Click" /></td>
             <td>
-                <asp:LinkButton PostBackUrl="~/SigIn.aspx" runat="server" ID="sigInButton" Text="SignIn" /></td>
+                <asp:Button runat="server" ID="signInButton" Text="SignIn" OnClick="signInButton_Click" /></td>
         </tr>
     </table>
 </asp:Content>
