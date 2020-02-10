@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace OnlineFoodOrder.BL
 {
-    public class CustomerBl
+    public class CustomerBL
     {
         CustomerRepository customerRepository = new CustomerRepository();
         public bool GetSignUpDetails(CustomerFields customerFields)

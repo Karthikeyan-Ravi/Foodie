@@ -67,9 +67,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Image\classic-pizza-with-peppers-and-parmesian.jpg" />
+    <Content Include="Image\fresh-plated-salad.jpg" />
+    <Content Include="Image\hamburger-and-fries.jpg" />
     <Content Include="RestaurantDetails.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Image\Swiggy.jpg" />
     <Content Include="SignIn.aspx" />
     <Content Include="SignUp.aspx" />
     <Content Include="StartMaster.aspx" />

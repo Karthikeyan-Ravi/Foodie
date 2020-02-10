@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="RestaurantDetails.aspx.cs" Inherits="Foodie.DisplayDetails" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="RestaurantDetails.aspx.cs" Inherits="Foodie.Restaurant" %>
 
 <asp:Content ID="restaurantDetailsHead" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -10,32 +10,41 @@
                     <asp:Label ID="lblSNo" Text='<%# Container.DataItemIndex + 1 %>' runat="server" />
                 </ItemTemplate>
                 <FooterTemplate>
-                    <asp:LinkButton ID="buttonInsert" Text="Insert" runat="server" OnClick="ButtonInsert_Click1"/>
+                    <asp:LinkButton ID="buttonInsert" Text="Insert" runat="server" OnClick="ButtonInsert_Click1" ValidationGroup="validateInsert"/>
                 </FooterTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="RestaurantName" runat="server">
                 <EditItemTemplate>
                     <asp:TextBox ID="txtRestaurantName" runat="server" Text='<%# Bind("RestaurantName") %>'></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rvfRestaurantName" runat="server" ControlToValidate="txtRestaurantName" ErrorMessage="Enter restaurant name"></asp:RequiredFieldValidator>
                 </EditItemTemplate>
                 <ItemTemplate>
                     <asp:Label ID="lblRestaurantName" runat="server" Text='<%# Bind("RestaurantName") %>'></asp:Label></ItemTemplate>
-                <FooterTemplate> <asp:TextBox ID="txtInsertRestaurantName" runat="server"></asp:TextBox> </FooterTemplate>
+                <FooterTemplate> <asp:TextBox ID="txtInsertRestaurantName" runat="server"></asp:TextBox> 
+                    <asp:RequiredFieldValidator ID="rvfInsertRestaurantName" runat="server" ControlToValidate="txtInsertRestaurantName" ErrorMessage="Enter restaurant name" ValidationGroup="validateInsert"></asp:RequiredFieldValidator>
+                </FooterTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="RestaurantType" runat="server">
                 <EditItemTemplate>
                     <asp:TextBox ID="txtRestaurantType" runat="server" Text='<%# Bind("RestaurantType") %>'></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rvfRestaurantType" runat="server" ControlToValidate="txtRestaurantType" ErrorMessage="Enter restaurant type"></asp:RequiredFieldValidator>
                 </EditItemTemplate>
                 <ItemTemplate>
                     <asp:Label ID="lblRestaurantType" runat="server" Text='<%# Bind("RestaurantType") %>'></asp:Label></ItemTemplate>
-                <FooterTemplate> <asp:TextBox ID="txtInsertRestaurantType" runat="server"></asp:TextBox> </FooterTemplate>
+                <FooterTemplate> <asp:TextBox ID="txtInsertRestaurantType" runat="server"></asp:TextBox> 
+                    <asp:RequiredFieldValidator ID="rvfInsertRestaurantType" runat="server" ControlToValidate="txtInsertRestaurantType" ErrorMessage="Enter restaurant type" ValidationGroup="validateInsert"></asp:RequiredFieldValidator>
+                </FooterTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Location" runat="server">
                 <EditItemTemplate>
                     <asp:TextBox ID="txtLocation" runat="server" Text='<%# Bind("Location") %>'></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rvfLocation" runat="server" ControlToValidate="txtLocation" ErrorMessage="Enter location"></asp:RequiredFieldValidator>
                 </EditItemTemplate>
                 <ItemTemplate>
                     <asp:Label ID="lblLocation" runat="server" Text='<%# Bind("Location") %>'></asp:Label></ItemTemplate>
-                <FooterTemplate> <asp:TextBox ID="txtInsertLocation" runat="server"></asp:TextBox> </FooterTemplate>
+                <FooterTemplate> <asp:TextBox ID="txtInsertLocation" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rvfInsertLocation" runat="server" ControlToValidate="txtInsertLocation" ErrorMessage="Enter location" ValidationGroup="validateInsert"></asp:RequiredFieldValidator>
+                </FooterTemplate>
             </asp:TemplateField>
         </Columns>
     </asp:GridView>

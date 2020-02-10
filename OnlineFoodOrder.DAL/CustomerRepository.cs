@@ -1,12 +1,8 @@
 ﻿using OnlineFoodOrder.Entity;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OnlineFoodOrder.DAL
 {
@@ -19,8 +15,7 @@ namespace OnlineFoodOrder.DAL
 
         public bool GetSignUpDetails(CustomerFields customerFields)
         {
-            string query = "Registration";
-            //DBUtils dBUtils = new DBUtils();
+            string query = "Sp_Registration";
             using (sqlConnection = new SqlConnection(connectionString))
             {
                 SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
@@ -40,20 +35,10 @@ namespace OnlineFoodOrder.DAL
                     return false;
                 }
             }
-            //Customer customer = new Customer(fullName, phoneNumber, mail, password,"user");
-            //userDetails.Add(customer);
-            ///DBUtils dBUtils = new DBUtils();
-            //dBUtils.ConnectionMethod();
-            //dBUtils.AddDetailsToDatabase(userDetails, dBUtils.ConnectionMethod());
-            //Console.WriteLine("Registration successful");
         }
         public string GetLogInDetails(string mail, string password)
         {
-            //logInMail = Validation.GetLogInMail();
-            //logInPassword = Validation.GetLogInPassword();
-            //DBUtils dBUtils = new DBUtils();
-            //dBUtils.CheckLogInDetails(logInMail,logInPassword,dBUtils.ConnectionMethod());
-            string query = "LogIn";
+            string query = "Sp_LogIn";
             using (sqlConnection = new SqlConnection(connectionString))
             {
                 sqlConnection.Open();

@@ -7,15 +7,19 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="StyleSheet1.css" />
 </head>
 <body>
     <form id="homePage" runat="server">
+         
         <div>
-            <div>
-                <h1>FOODIE</h1>
-                <asp:HyperLink ID="signInLink" runat="server" Text="SignIn " NavigateUrl="SignIn.aspx"></asp:HyperLink>
+             <h1 align="center">FOODIE</h1>
+            <div align="right" class="word">
+                <asp:HyperLink ID="homeLink" runat="server" Text="Home" NavigateUrl="~/StartMaster.aspx"></asp:HyperLink>
+                <asp:HyperLink ID="signInLink" runat="server" Text="SignIn " NavigateUrl="~/SignIn.aspx"></asp:HyperLink>
                 <asp:HyperLink ID="signUpLink" runat="server" Text=" SignUp " NavigateUrl="SignUp.aspx"></asp:HyperLink>
-                <asp:HyperLink ID="restaurantLink" runat="server" Text=" Restaurant Details" NavigateUrl="~/RestaurantDetails.aspx"></asp:HyperLink>
+                <asp:HyperLink ID="restaurantLink" runat="server" Text="Add_Restaurant" NavigateUrl="~/RestaurantDetails.aspx"></asp:HyperLink>
+
             </div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
 

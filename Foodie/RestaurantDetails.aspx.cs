@@ -1,19 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Data.SqlClient;
 using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Data;
-using OnlineFoodOrdering;
 using OnlineFoodOrder.Entity;
 using OnlineFoodOrder.BL;
 
 namespace Foodie
 {
-    public partial class DisplayDetails : System.Web.UI.Page
+    public partial class Restaurant : System.Web.UI.Page
     {
         RestaurantFields restaurantFields;
         RestaurantBL restaurantBL;

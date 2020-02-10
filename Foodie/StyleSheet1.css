@@ -1,11 +1,16 @@
-﻿body {
-    /*background-image:url('Image/Swiggy.jpg');*/
-    background-repeat:no-repeat;
+﻿body 
+{
+    background-image:url(Image/classic-pizza-with-peppers-and-parmesian.jpg);
+    /*background-repeat:no-repeat;*/
     background-size:cover;
 }
-.box{
-    color:white;
+.box
+{
+    color:black;
     font-size:large;
-    font-style:oblique;
-
+    font-style:inherit
+}
+.word
+{
+    word-spacing:10px;
 }

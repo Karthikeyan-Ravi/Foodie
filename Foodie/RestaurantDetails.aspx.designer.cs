@@ -11,7 +11,7 @@ namespace Foodie
 {
 
 
-    public partial class DisplayDetails
+    public partial class Restaurant
     {
 
         /// <summary>

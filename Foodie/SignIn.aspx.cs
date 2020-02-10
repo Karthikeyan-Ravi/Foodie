@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using OnlineFoodOrder.BL;
-using OnlineFoodOrdering;
 
 namespace Foodie
 {
@@ -18,8 +12,8 @@ namespace Foodie
 
         protected void SubmitButton_Click(object sender, EventArgs e)
         {
-            CustomerBl customerBl = new CustomerBl(); 
-            string result = customerBl.GetLogInDetails(TextEmail.Text, TextPassword.Text);
+            CustomerBL customerBl = new CustomerBL(); 
+            string result = customerBl.GetLogInDetails(txtEmail.Text, txtPassword.Text);
             if (result == "Admin" || result == "User")
             {
                 Response.Write(result + " LogIn successful");

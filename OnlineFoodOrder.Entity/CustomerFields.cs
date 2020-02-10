@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OnlineFoodOrder.Entity
+﻿namespace OnlineFoodOrder.Entity
 {
     public class CustomerFields
     {
@@ -13,7 +7,7 @@ namespace OnlineFoodOrder.Entity
             get;
             set;
         }
-        public double PhoneNumber
+        public long PhoneNumber
         {
             get;
             set;
@@ -33,8 +27,7 @@ namespace OnlineFoodOrder.Entity
             get;
             set;
         }
-        //public static List<CustomerAdminFields> userAdminDetails = new List<CustomerAdminFields>();
-        public CustomerFields(string fullName, double phoneNumber, string mail, string password, string role)
+        public CustomerFields(string fullName, long phoneNumber, string mail, string password, string role)
         {
             this.FullName = fullName;
             this.PhoneNumber = phoneNumber;

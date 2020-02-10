@@ -3,16 +3,16 @@
 <asp:Content ID="contentHead" runat="server" ContentPlaceHolderID="head"></asp:Content>
 <asp:Content ID="contentPlaceHolderSignIn" runat="server" ContentPlaceHolderID="ContentPlaceHolder">
 
-    <table class="box">
+    <table class="box" align="center">
         <tr>
             <td>Email :</td>
             <td>
-                <asp:TextBox runat="server" ID="TextEmail"></asp:TextBox></td>
+                <asp:TextBox runat="server" ID="txtEmail"></asp:TextBox></td>
         </tr>
         <tr>
             <td>Password :</td>
             <td>
-                <asp:TextBox runat="server" ID="TextPassword"></asp:TextBox></td>
+                <asp:TextBox runat="server" ID="txtPassword" TextMode="Password"></asp:TextBox></td>
         </tr>
         <tr>
             <td>

@@ -15,13 +15,13 @@ namespace Foodie
     {
 
         /// <summary>
-        /// Txtname control.
+        /// txtname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Txtname;
+        protected global::System.Web.UI.WebControls.TextBox txtname;
 
         /// <summary>
         /// rvfName control.
@@ -42,13 +42,13 @@ namespace Foodie
         protected global::System.Web.UI.WebControls.RegularExpressionValidator validateName;
 
         /// <summary>
-        /// TxtPhone control.
+        /// txtPhone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtPhone;
+        protected global::System.Web.UI.WebControls.TextBox txtPhone;
 
         /// <summary>
         /// rvfPhoneNumber control.
@@ -69,13 +69,13 @@ namespace Foodie
         protected global::System.Web.UI.WebControls.RegularExpressionValidator validatePhone;
 
         /// <summary>
-        /// TxtEmail control.
+        /// txtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtEmail;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
         /// rvfEmail control.
@@ -96,13 +96,13 @@ namespace Foodie
         protected global::System.Web.UI.WebControls.RegularExpressionValidator validateEmail;
 
         /// <summary>
-        /// TxtPassword control.
+        /// txtPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtPassword;
+        protected global::System.Web.UI.WebControls.TextBox txtPassword;
 
         /// <summary>
         /// rvfPassword control.
@@ -123,13 +123,13 @@ namespace Foodie
         protected global::System.Web.UI.WebControls.RegularExpressionValidator validatePassword;
 
         /// <summary>
-        /// TxtConfirmPassword control.
+        /// txtConfirmPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtConfirmPassword;
+        protected global::System.Web.UI.WebControls.TextBox txtConfirmPassword;
 
         /// <summary>
         /// rvfConfirmPassword control.
