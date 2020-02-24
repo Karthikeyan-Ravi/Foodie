@@ -25,6 +25,8 @@
         public string Role
         { 
             get;
+
+
             set;
         }
         public CustomerFields(string fullName, long phoneNumber, string mail, string password, string role)
