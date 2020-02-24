@@ -56,7 +56,7 @@
       <Name>OnlineFoodOrder.DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\OnlineFoodOrder.Entity\OnlineFoodOrder.Entity.csproj">
-      <Project>{5a35895e-caf9-43ca-a6bb-65865c540de7}</Project>
+      <Project>{5A35895E-CAF9-43CA-A6BB-65865C540DE7}</Project>
       <Name>OnlineFoodOrder.Entity</Name>
     </ProjectReference>
   </ItemGroup>

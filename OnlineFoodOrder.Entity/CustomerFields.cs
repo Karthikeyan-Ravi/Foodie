@@ -1,5 +1,11 @@
 ﻿namespace OnlineFoodOrder.Entity
 {
+    public enum Gender
+    {
+        Male,
+        Female,
+        Others
+    }
     public class CustomerFields
     {
         public string FullName
@@ -8,6 +14,11 @@
             set;
         }
         public long PhoneNumber
+        {
+            get;
+            set;
+        }
+        public Gender Gender
         {
             get;
             set;
