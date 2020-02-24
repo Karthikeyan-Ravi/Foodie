@@ -44,6 +44,7 @@
         }
         public CustomerFields(string fullName, long phoneNumber, string mail, string password, string role)
         {
+
             this.FullName = fullName;
             this.PhoneNumber = phoneNumber;
             this.Mail = mail;
