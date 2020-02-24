@@ -23,6 +23,8 @@
             get;
             set;
         }
+
+
         public string Mail
         {
             get;
